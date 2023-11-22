@@ -1,0 +1,41 @@
+service: editly-video-maker
+
+plugins:
+ - serverless-azure-functions
+ - serverless-plugin-optimize
+ - serverless-offline
+ - serverless-plugin-typescript
+
+provider:
+  name: azure
+  runtime: nodejs16
+  region: ap-southeast-2
+  stage: dev
+  subscriptionId: cab43636-c1df-4c63-8837-f9c19790c9ea
+  resourceGroup: DefaultResourceGroup-CUS
+
+frameworkVersion: '3'
+
+package:
+  # Any `include`, `exclude` logic is applied to the whole service, the same
+  # as built-in serverless packaging.
+  # include: ...
+  exclude:
+    - "**/node_modules" # included on Lambda.
+    - "**/ffmpeg-layer"
+    - "!package.json"
+
+functions:
+  main:
+    handler: src/lambda.handler
+    events:
+      - http:
+         method: ANY
+         path: /
+      - http: 
+         method: ANY
+         path: '{proxy+}'
+
+# layers:
+#   ffmpeg:
+#     path: layer         

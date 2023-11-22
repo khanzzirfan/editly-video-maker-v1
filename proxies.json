@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json.schemastore.org/proxies",
+  "proxies": {
+    "swagger-proxy": {
+      "matchCondition": {
+        "route": "/api/swagger-ui"
+      },
+      "backendUri": "https://sls-ausse-dev-igloo-ipricematchdevapi.azurewebsites.net/api/swagger-ui"
+    },
+    "api": {
+      "matchCondition": {
+        "route": "/api/*"
+      },
+      "backendUri": "https://sls-ausse-dev-igloo-ipricematchdevapi.azurewebsites.net"
+    }
+  }
+}

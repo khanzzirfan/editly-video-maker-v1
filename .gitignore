@@ -1,0 +1,9 @@
+node_modules
+## add all unwanted files
+.build
+.serverless
+dist
+tmp/**
+readme.deploy.md
+ffmpeg-layer
+main
