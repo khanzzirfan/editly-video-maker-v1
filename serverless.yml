@@ -19,7 +19,8 @@ frameworkVersion: '3'
 package:
   individually: false
   exclude:
-      - package.json
+    - node_modules/**
+    - package.json
 
 functions:
   main:
