@@ -21,7 +21,7 @@ package:
   # as built-in serverless packaging.
   # include: ...
   exclude:
-    - "**/node_modules" # included on Lambda.
+    - "**/node_modules" # included on Lambda.a
     - "**/ffmpeg-layer"
     - "!package.json"
 
