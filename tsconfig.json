@@ -8,11 +8,9 @@
     "allowSyntheticDefaultImports": true,
     "target": "es2019",
     "sourceMap": true,
-    "outDir": "./",
+    "outDir": ".serverless",
     "rootDir": "./",
     "baseUrl": "./",
     "esModuleInterop": true
-  },
-  "include": ["**/*.ts"],
-  "exclude": ["node_modules"]
+  }
 }
