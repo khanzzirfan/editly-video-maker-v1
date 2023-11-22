@@ -35,6 +35,9 @@ functions:
       - http: 
          method: ANY
          path: '{proxy+}'
+    environment:
+      FFMPEG_PATH: path/to/ffmpeg-binary
+      FFPROBE_PATH: path/to/ffprobe-binary
 
 # layers:
 #   ffmpeg:

@@ -19,6 +19,9 @@ jobs:
           node-version: 16
       - run: npm install
       - run: npm run build
+      - run: npm run sls:package
+      ## list all files and folders
+      - run: ls -la
       - run: npm run sls:deploy
         env:
           AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
