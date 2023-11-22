@@ -21,6 +21,8 @@ package:
   exclude:
     - node_modules/**
     - package.json
+    - '!node_modules/@ffmpeg-installer/ffmpeg'
+    - '!node_modules/@ffprobe-installer/ffprobe'
 
 functions:
   main:
