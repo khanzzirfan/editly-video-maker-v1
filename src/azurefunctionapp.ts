@@ -1,12 +1,11 @@
 import { NestFactory } from '@nestjs/core';
 import { ExpressAdapter } from '@nestjs/platform-express';
 import serverlessExpress from '@vendia/serverless-express';
-import { Context, Handler } from 'aws-lambda';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import express from 'express';
 import { AppModule } from './app.module';
 
-let cachedServer: Handler;
+let cachedServer: any;
 
 /** Enable swagger */
 function setupSwaggerDocument(app) {
@@ -38,7 +37,7 @@ async function bootstrap() {
 
 export const handler = async (
   event: any,
-  context: Context,
+  context: any,
   callback: any,
 ): Promise<any> => {
   const server = await bootstrap();
