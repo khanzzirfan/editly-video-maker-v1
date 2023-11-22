@@ -21,6 +21,14 @@ jobs:
       - run: npm run sls:package
       ## list all files and folders
       - run: ls -la
+      ## list all files and folders in dist
+      - run: ls -la dist
+      ## list all files and folders in .build
+      - run: ls -la .build
+      ## list all files and folders in .serverless
+      - run: ls -la .serverless
+      ## list all files and folders in .webpack
+      - run: ls -la .webpack
       - run: npm run sls:deploy
         env:
           AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
