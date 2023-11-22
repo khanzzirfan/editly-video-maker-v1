@@ -17,6 +17,8 @@ provider:
 frameworkVersion: '3'
 
 package:
+  artifact: .serverless/editly-video-maker.zip
+
   # Any `include`, `exclude` logic is applied to the whole service, the same
   # as built-in serverless packaging.
   # include: ...
