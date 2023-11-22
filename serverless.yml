@@ -17,13 +17,9 @@ provider:
 frameworkVersion: '3'
 
 package:
-  # Any `include`, `exclude` logic is applied to the whole service, the same
-  # as built-in serverless packaging.
-  # include: ...
+  individually: false
   exclude:
-    - "**/node_modules" # included on Lambda.a
-    - "**/ffmpeg-layer"
-    - "!package.json"
+      - package.json
 
 functions:
   main:
